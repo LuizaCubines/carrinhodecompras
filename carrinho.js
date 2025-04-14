@@ -66,6 +66,12 @@ function renderizarCarrinho() {
     document.getElementById('total-carrinho').textContent = `R$ ${totalCarrinho.toFixed(2)}`;
 }
  
+function LimparCarrinho() {
+    carrinho = [];
+    salvarCarrinho();
+    renderizarCarrinho();
+}
+
 // Aguarda o carregamento completo do DOM antes de executar o script
 document.addEventListener('DOMContentLoaded', () => {
     const carregado = localStorage.getItem('carrinho');

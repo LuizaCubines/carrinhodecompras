@@ -12,7 +12,9 @@
         <div class="caixa">
             <h1>Carrinho de Compras</h1>
         </div>
- 
+        
+        <audio controls src="https://suno.com/song/641f2a3a-1d6a-495e-a656-f84daaff8827?sh=kFBGN5PC1BilUhQW" type="audio/mpeg"></audio>
+
         <div class="caixa">
             <!-- esssas são as opções de compra -->
             <h2>Adicionar Produto</h2>
@@ -66,6 +68,7 @@
                     </tr>
                 </tfoot>
             </table>
+            <button onclick="LimparCarrinho()">Limpar carrinho</button>
         </div>
     </div>
 <!-- quando for fechar a pagina, vai aparecer isso -->
@@ -89,7 +92,7 @@
                 </div>
             </div>
 <!-- continuar comprando -->
-            <button onclick="fecharModal()" style="padding: 10px 20px; background: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            <button class="modal-btn" onclick="fecharModal()">
                 Continuar Comprando
             </button>
         </div>

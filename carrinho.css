@@ -96,3 +96,12 @@ tfoot td {
     font-weight: bold;
     font-size: 1.2em;
 }
+
+.modal-btn{
+    padding: 10px 20px; 
+    background: #418794; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+}
