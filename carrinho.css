@@ -1,0 +1,98 @@
+/* cor da pagina de fundo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #b3f4f7; /* Cor de fundo da página */
+}
+ 
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+ 
+.form-group {
+    margin-bottom: 10px;
+}
+ 
+input, select {
+    margin-right: 10px;
+    padding: 5px;
+}
+/* tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+/* tabela */
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+/* tabela */
+th {
+    background-color: #f2f2f2;
+}
+/* tabela */
+tfoot td {
+    font-weight: bold;
+}
+ 
+/* fundo branco*/
+.caixa {
+    /* Cor de fundo do quadrado */
+    background-color: #ffffff;
+    /* Espaço interno ao redor do conteúdo */
+    border: 2px solid #ddd;
+    /* Espaço interno ao redor do conteúdo */
+    padding: 30px;
+    /* Margem em cima e embaixo da caixa */
+    margin: 30px 0;
+    /* Sombra para dar destaque */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+ 
+.modal-ofertas {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.modal-conteudo {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+}
+ 
+.ofertas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+}
+ 
+.oferta-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+ 
+.fechar-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2em;
+}

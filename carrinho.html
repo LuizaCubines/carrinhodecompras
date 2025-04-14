@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="carrinho.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Carrinho</title>
+</head>
+<body>
+    <div class="container">
+        <div class="caixa">
+            <h1>Carrinho de Compras</h1>
+        </div>
+ 
+        <div class="caixa">
+            <!-- esssas são as opções de compra -->
+            <h2>Adicionar Produto</h2>
+            <div class="form-group">
+                <label for="produto">Produto:</label>
+                <select id="produto" onchange="atualizarCampos()">
+                    <option value="001" data-preco="5.99">Maçã</option>
+                    <option value="002" data-preco="3.50">Banana</option>
+                    <option value="003" data-preco="2.75">Laranja</option>
+                    <option value="004" data-preco="6.90">Brócolis</option>
+                    <option value="005" data-preco="10.00">Pepino</option>
+                    <option value="006" data-preco="15.85">Detergente Ipe</option>
+                    <option value="007" data-preco="17.50">Guardanapo de pano</option>
+                    <option value="008" data-preco="10.99">Chocolate Lacta</option>
+                    <option value="009" data-preco="90.99">Ovo de páscoa</option>
+                </select>
+ 
+                <label for="codigo">Código:</label>
+                <input type="text" id="codigo" readonly>
+ 
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" min="1" value="1">
+ 
+                <label for="preco">Preço Unitário:</label>
+                <input type="number" id="preco" readonly>
+ 
+                <!-- adiciona os itens ao carrinho -->
+                <button onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+ 
+        <div class="caixa">
+            <h2>Itens do Carrinho</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nome</th>
+                        <th>Quantidade</th>
+                        <th>Preço Unitário</th>
+                        <th>Total</th>
+                    </tr>
+                    <!-- carrinho final -->
+                </thead>
+                <tbody id="lista-carrinho">
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Total do Carrinho:</td>
+                        <td id="total-carrinho">0.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+<!-- quando for fechar a pagina, vai aparecer isso -->
+    <div class="modal-ofertas" id="modalOfertas">
+        <div class="modal-conteudo">
+            <span class="fechar-modal" onclick="fecharModal()">×</span>
+            <h2>Não vá embora ainda! 😁</h2>
+            <p>Aproveite nossas ofertas especiais:</p>
+           
+            <div class="ofertas-grid">
+                <div class="oferta-item">
+                    <h3>Chocolate Lactea</h3>
+                    <p>De R$ 13,99 por</p>
+                    <!-- cor do preço, aparece em uma cor diferente para chamar a atenção -->
+                    <p style="color: red; font-weight: bold;">R$ 10,99</p>
+                </div>
+                <div class="oferta-item">
+                    <h3>Banana</h3>
+                    <p>Leve 3 por</p>
+                    <p style="color: red; font-weight: bold;">R$ 9,00</p>
+                </div>
+            </div>
+<!-- continuar comprando -->
+            <button onclick="fecharModal()" style="padding: 10px 20px; background: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Continuar Comprando
+            </button>
+        </div>
+    </div>
+</body>
+<script src="carrinho.js"></script>
+</html>
